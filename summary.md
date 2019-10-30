@@ -19,8 +19,6 @@ $$\mu(i,j) = \sum_{k=-K}^{K}\sum_{l=-L}^{L}w_{k,l}I_{k,l}(i,j)$$
 
 where $w$ is a Gaussian kernel of size $(K, L)$.
 
-The way that the author displays the local mean could be a little bit confusing but it is just applying a Gaussian filter to the image.
-
 Then, we calculate the local deviation
 
 $$ \sigma(i,j) = \sqrt{\sum_{k=-K}^{K}\sum_{l=-L}^{L}w_{k,l}(I_{k,l}(i, j) - \mu(i, j))^2 } $$
@@ -28,10 +26,22 @@ $$ \sigma(i,j) = \sqrt{\sum_{k=-K}^{K}\sum_{l=-L}^{L}w_{k,l}(I_{k,l}(i, j) - \mu
 Finally, we calculate the MSCN coefficients
 
 $$\hat{I}(i,j) = \frac{I(i,j) - \mu(i,j)}{\sigma(i,j) + C}$$
+<br/><br/><br/><br/><br/><br/>
 
-![image origin](image/test.png)
+<center>image origin</center>
+
+![Alt](image/test.png "image origin")
+
+<center>local mean</center>
+
 ![local mean](image/local_mean.png)
+
+<center>local var</center>
+
 ![local var](image/local_var.png)
+
+<center>MSCN</center>
+
 ![MSCN](image/mscn.png)
 
 
@@ -105,6 +115,8 @@ $$\rho(\alpha) = \frac{\Gamma(2 / \alpha) ^ 2}{\Gamma(1 / \alpha) \Gamma(3 / \al
 
 $$\sigma_l = \sqrt{\frac{1}{N_l - 1}\sum_{k=1, x_k < 0}^{N_l} x_k^2}$$
 $$\sigma_r = \sqrt{\frac{1}{N_r - 1}\sum_{k=1, x_k >= 0}^{N_r} x_k^2}$$
+<br/><br/><br/><br/><br/>
+<center>Histogram of MSCN coefficients</center>
 
 ![Histogram of MSCN coefficients](image/Histogram_of_MSCN_coefficients.png)
 

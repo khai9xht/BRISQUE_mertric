@@ -53,18 +53,23 @@ class Brisque_metric:
 
 if __name__ == '__main__':
     call = Brisque_metric()
-    img_fusion = cv2.imread('fusion.png')
-    gray_image_fusion = cv2.cvtColor(img_fusion, cv2.COLOR_BGR2GRAY)/255.0
-    img_over = cv2.imread('over.jpg')
-    gray_image_over = cv2.cvtColor(img_over, cv2.COLOR_BGR2GRAY)/255.0
-    img_under = cv2.imread('under.jpg')
-    gray_image_under = cv2.cvtColor(img_under, cv2.COLOR_BGR2GRAY)/255.0
+    # img_fusion = cv2.imread('image/fusion.png')
+    # gray_image_fusion = cv2.cvtColor(img_fusion, cv2.COLOR_BGR2GRAY)/255.0
+    # img_over = cv2.imread('image/over.jpg')
+    # gray_image_over = cv2.cvtColor(img_over, cv2.COLOR_BGR2GRAY)/255.0
+    # img_under = cv2.imread('image/under.jpg')
+    # gray_image_under = cv2.cvtColor(img_under, cv2.COLOR_BGR2GRAY)/255.0
 
-    fusion = call.get_score(gray_image_fusion)
-    over = call.get_score(gray_image_over)
-    under = call.get_score(gray_image_under)
+    # fusion = call.get_score(gray_image_fusion)
+    # over = call.get_score(gray_image_over)
+    # under = call.get_score(gray_image_under)
 
-    print('fusion: ', fusion)
-    print('over: ', over)
-    print('under: ', under)
+    # print('fusion: ', fusion)
+    # print('over: ', over)
+    # print('under: ', under)
+
+    img_test = cv2.imread('image/livingroom6.jpg')
+    gray_img_test = cv2.cvtColor(img_test, cv2.COLOR_BGR2GRAY)/255.0
+    score = call.get_score(gray_img_test)
+    print(score)
     
